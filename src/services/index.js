@@ -1,6 +1,7 @@
 // import axios from "axios";
 // import {API_BASE as apiBase} from "../constants";
 import carouseList from "../mock/carouselList";
+import data from "../mock/data";
 
 // const CommonHeader = {
 //   'content-type': 'application/json'
@@ -26,3 +27,9 @@ export const getCarouselList = () => {
   //   headers: CommonHeader
   // })
 };
+
+export const getMainInfo = () => {
+  return new Promise(resolve => {
+    resolve(data);
+  });
+}

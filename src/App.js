@@ -2,14 +2,15 @@ import React, {Component} from 'react';
 import {Carousel, Menu} from 'element-react';
 import 'element-theme-default';
 
-import {getCarouselList} from './services/';
+import {getCarouselList, getMainInfo} from './services/';
 import './App.css';
 
 class App extends Component {
   constructor(props){
     super(props);
     this.state = {
-      carouselList: []
+      carouselList: [],
+      description: "",
     }
   }
 
@@ -33,7 +34,7 @@ class App extends Component {
         </header>
         <main className="App-content">
           <div className="carousel-list">
-            <Carousel type="card" indicatorPosition="outside" height="500px">
+            <Carousel type="flatcard" indicatorPosition="outside" height="300px">
               {
                 this.state.carouselList.map((item, index) => {
                   return (
@@ -46,11 +47,13 @@ class App extends Component {
             </Carousel>
           </div>
           <article className="company-des">
-
+            <p>
+              {this.state.description}
+            </p>
           </article>
         </main>
         <footer>
-
+          <p>中国区服务电话<span>0571-88668281</span><span>5372059980/15158046650</span></p>
         </footer>
       </div>
     );
@@ -60,6 +63,11 @@ class App extends Component {
     getCarouselList().then(data => {
       this.setState({
         carouselList: [...data.dataList]
+      })
+    });
+    getMainInfo().then(data => {
+      this.setState({
+        description: data.description,
       })
     })
   }
