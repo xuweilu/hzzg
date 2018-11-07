@@ -49,7 +49,7 @@
 }
 
 .company-des {
-
+  padding: 0 20px;
 }
 
 .company-des-title {
@@ -70,6 +70,7 @@
 .footer {
   background: #1D8CE0;
   color: #FFFFFF;
+  padding: 0 20px;
 }
 
 .about {
