@@ -2,9 +2,9 @@ import React, {Component} from 'react';
 import {Carousel, Menu, Layout} from 'element-react';
 import 'element-theme-default';
 
-import {getCarouselList, getPriceInfo} from './services/';
+import {getCarouselList, getPriceInfo} from '../../services/index';
 import './App.css';
-import companyIcon from "./assets/images/icons/icon.jpg";
+import companyIcon from "../../assets/images/icons/icon.jpg";
 
 class App extends Component {
   constructor(props) {
