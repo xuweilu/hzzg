@@ -26,11 +26,45 @@
   height: 100%;
 }
 
+.price-info {
+  margin-bottom: 20px;
+  box-shadow: 0 0 5px #8492A6;
+}
+
+.price-info-item {
+
+}
+
+.price-info-name, .price-info-price {
+  font-size: 13px;
+  font-weight: 300;
+}
+
+.price-info-price {
+  display: inline-block;
+  margin-left: 5px;
+  font-weight: 300;
+}
+
+.price-info-change {
+  font-size: 12px;
+  display: inline-block;
+  margin-left: 5px;
+}
+
+.green {
+  color: #13ce66;
+}
+
+.red {
+  color: #ff4949;
+}
+
 .carousel-item {
 }
 
 .carousel-item-img {
-  width: auto;
+  width: 100%;
   height: 100%;
 }
 

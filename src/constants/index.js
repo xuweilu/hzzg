@@ -1,1 +1,1 @@
-export const API_BASE = "./";
+export const API_BASE = process.env.NODE_ENV === "development" ? "http://localhost:2403" : "65.49.208.114";
